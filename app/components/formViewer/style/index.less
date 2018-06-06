@@ -1,0 +1,51 @@
+@import "./../../style/themes/default";
+
+.formTableDiv{
+    animation: antFadeIn 0.3s;
+    margin: 20px 0;
+    .formTable{
+        width: 100%;
+        .ant-row{
+            margin-bottom: 0;
+        }
+    }
+    .tableFuncDiv{
+        width: 100%;
+    }
+    td{
+        border: 1px solid @borderGrey;
+        padding: 5px;
+    }
+    button{
+        margin: 5px 5px 5px 0;
+    }
+}
+.requiredDiv{
+    position: absolute;
+    right: -10px;
+    top:0;
+    height: 100%;
+}
+.formItem{
+    .formatterSwitcher{
+        opacity: 0;
+        position: absolute;
+        right:8px;
+        color: #999999;
+        line-height: 2.3;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .formatterSwitcher:hover{
+        color: #cccccc;
+    }
+    .formatterTextArea{
+        animation: antFadeIn 0.3s;
+    }
+    &:hover{
+        .formatterSwitcher{
+            opacity:1;
+        }
+    }
+}
+

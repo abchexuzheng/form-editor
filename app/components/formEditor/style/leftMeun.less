@@ -1,0 +1,77 @@
+@selecterHeight:80px;
+
+.leftMenu,.menuContainer,.fieldEditorContainer,.fieldEditorTable{
+    height: 100%;
+    position: relative;
+}
+.fieldEditorTable{
+    overflow: auto;
+}
+.menuContainer{
+    padding-top: 48px;
+}
+.menuSwitcher{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.formElementSelecter{
+    animation: antFadeIn 0.3s;
+    .selecterDiv{
+        border: 1px solid @borderGrey;
+        border-top: none;
+    }
+    .selecterTitle{
+        border-bottom: 1px solid @borderGrey;
+        padding: 5px 15px;
+        font-weight: 600;
+        font-size: 16px;
+        user-select:none;
+    }
+    .simpleSelecter{
+        width: 33.333333%;
+        display: inline-block;
+        text-align: center;
+        height: @selecterHeight;
+        border-right: 1px solid @borderGrey;
+        border-bottom: 1px solid @borderGrey;
+        user-select:none;
+        vertical-align: middle;
+        .simpleSelecterTitle{
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 10px;
+            line-height: 40px;
+        }
+        .simpleSelecterInfo{
+            font-size: 13px;
+            font-weight: 400;
+            color: #cccccc;
+            line-height: 13px;
+        }
+    }
+    .simpleSelecter:nth-child(3n+3){
+        border-right: none;
+    }
+    .simpleSelecter:nth-last-child(1),.simpleSelecter:nth-last-child(2),.simpleSelecter:nth-last-child(3){
+        border-bottom: none;
+    }
+    .simpleSelecter:nth-last-child(2):nth-child(3n+3),.simpleSelecter:nth-last-child(3):nth-child(3n+2),.simpleSelecter:nth-last-child(3):nth-child(3n+3){
+        border-bottom: 1px solid @borderGrey;
+    }
+    .simpleSelecter:hover,.selecterTitle:hover{
+        background: @hoverBlue;
+        cursor: pointer;
+    }
+    .addFieldIcon{
+        font-size:30px;
+        font-weight:600;
+        margin: auto;
+        line-height: @selecterHeight;
+        color: #8c8c8c;
+        width: 100%;
+        &:hover{
+            font-size: 40px;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<head>
+    <meta charset="UTF-8">
+    <title>表单工具</title>
+    <link href="formCreater.css" rel="stylesheet">
+</head>
+<body>
+<!--要插入React组件的位置-->
+<div id="np-form" class="np-form" data-source="http://localhost:8280/getForm?formid=formid1" data-mode="edit">
+    <button onclick="window.npForm.render()">render</button>
+</div>
+<!--引入bundle.js-->
+<script src="bundle.js"></script>
+
+<script>
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+    var dom=document.getElementById("np-form");
+    var options={
+        source:getQueryString("source"),
+        mode:getQueryString("mode")
+    };
+    npForm.render(dom,options)
+
+</script>
+
+</body>
+</html>

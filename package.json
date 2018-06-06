@@ -1,0 +1,40 @@
+{
+  "name": "np-form",
+  "version": "1.0.0",
+  "description": "表单工具",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack",
+    "dev": "webpack-dev-server",
+    "pub": "webpack --config webpack.pub.config.js"
+  },
+  "author": "hexuzheng",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.16.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "antd": "^3.0.0",
+    "babel-polyfill": "^6.26.0",
+    "codemirror": "^5.35.0",
+    "fetch-polyfill": "^0.8.2",
+    "jquery": "^3.2.1",
+    "react-codemirror2": "^4.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-undo": "^0.6.1"
+  }
+}
