@@ -1,0 +1,78 @@
+// import DataOption from "../class/DataOption"
+// import SelecterData from "../class/SelecterData"
+
+//单元格默认配置
+var defaultCellOption={
+    fieldData:[{
+        name:'单元格属性',
+        type:'form',
+        id:'cellOption',
+        pid:'0'
+    },{
+        name:'对齐方式',
+        type:'select',
+        id:'textAlign',
+        pid:'cellOption',
+        value:'left',
+        data:[{
+            value:'left',
+            name:'居左'
+        },{
+            value:'center',
+            name:'居中'
+        },{
+            value:'right',
+            name:'居右'
+        }],
+        formatterAble:true
+    },{
+        name:'内容',
+        type:'textarea',
+        id:'content',
+        pid:'cellOption',
+        formatterAble:true
+    },{
+        name:'字体大小',
+        type:'input',
+        id:'fontSize',
+        pid:'cellOption',
+        value:'14px',
+        formatterAble:true
+    },{
+        name:'宽度',
+        type:'input',
+        id:'width',
+        pid:'cellOption',
+        formatterAble:true
+    },{
+        name:'字体粗细',
+        type:'input',
+        id:'fontWeight',
+        pid:'cellOption',
+        value:'400',
+        formatterAble:true
+    },{
+        name:'字体颜色',
+        type:'input',
+        id:'color',
+        pid:'cellOption',
+        value:'#666666',
+        formatterAble:true
+    },{
+        name:'背景色',
+        type:'input',
+        id:'background',
+        pid:'cellOption',
+        value:'#ffffff',
+        formatterAble:true
+    },{
+        name:'是否隐藏',
+        type:'switch',
+        id:'hidden',
+        pid:'cellOption',
+        value:false,
+        formatterAble:true
+    }]
+}
+
+exports.default=defaultCellOption

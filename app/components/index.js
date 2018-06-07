@@ -40,7 +40,7 @@ class NpForm extends React.Component{
         }).then(function(response) {
             return response.json();
         }).then(function(response) {
-            store.dispatch(initData(response,4));
+            store.dispatch(initData(response.default,4));
             thisObj.setState({loaded:true})
         }).catch(function(err) {
             console.log(err)

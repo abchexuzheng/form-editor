@@ -9,6 +9,7 @@ import FieldData from './../class/FieldData'
 //import "./../style/index_bak.less"
 import {defaultFieldOption,defaultMainFormOption,defaultCellOption,defaultFormOption} from './../constData'
 
+let optionsArr=["fieldOption","cellOption","formOption","mainFormOption"]
 
 class FieldEditor extends React.Component{
     constructor(props) {
@@ -23,10 +24,10 @@ class FieldEditor extends React.Component{
             this.getOptions("formOption"),
             this.getOptions("mainFormOption")
         ]).then(function(res){
-            for(let item of res){
-                that[item.formId]={
-                    fieldData:item.fieldData,
-                    formData:item.formData
+            for(let [index,item] of res.entries()){
+                that[optionsArr[index]]={
+                    fieldData:item.default.fieldData,
+                    formData:item.default.formData
                 }
             }
             that.setState({
@@ -43,10 +44,7 @@ class FieldEditor extends React.Component{
             return response.json();
         }).then(function(response) {
             return response;
-        }).catch(function(err) {
-            console.log(err);
-            // 出错了;等价于 then 的第二个参数,但这样更好用更直观 :(
-        });
+        })
     }
     initState(){
         var optionForm;
