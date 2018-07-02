@@ -22,6 +22,9 @@ export const RESET_LAYOUT = 'RESET_LAYOUT';
 export const UPDATE_DATA = 'UPDATE_DATA';
 export const ADD_NEW_FIELD = 'ADD_NEW_FIELD';
 
+
+
+
 /*
  * 其它的常量
  */
