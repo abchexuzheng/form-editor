@@ -14,6 +14,7 @@ var options={
 }
 
 function route(request,response) {
+    response.setHeader("Access-Control-Allow-Origin", "*"); 
     console.log("About to route a request for " + pathname);
     var pathname = url.parse(request.url).pathname;
     function showPage(pathRoute){
@@ -140,4 +141,3 @@ function route(request,response) {
 }
 
 exports.route = route;
-
